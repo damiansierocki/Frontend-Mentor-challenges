@@ -1,0 +1,159 @@
+:root {
+	/* Primary colors */
+	--purple: hsl(259, 100%, 65%);
+	--light-red: hsl(0, 100%, 67%);
+
+	/* Neutral colors */
+	--white: hsl(0, 0%, 100%);
+	--off-white: hsl(0, 0%, 94%);
+	--light-grey: hsl(0, 0%, 86%);
+	--smoke-grey: hsl(0, 1%, 44%);
+	--off-black: hsl(0, 0%, 8%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--off-white);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	background-color: var(--white);
+	width: 100%;
+	max-width: 700px;
+	height: 450px;
+	margin: 0 20px;
+	padding: 35px 25px;
+	border-radius: 20px 20px 30% 20px;
+}
+
+.inputs-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+	max-width: 85px;
+}
+
+.input-label {
+	text-transform: uppercase;
+	color: var(--smoke-grey);
+	letter-spacing: 3px;
+	font-size: 12px;
+}
+
+.input {
+	margin-top: 3px;
+	padding: 15px 10px;
+	border-radius: 10px;
+	border: 1px solid var(--light-grey);
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.input:focus {
+	outline-color: var(--purple);
+}
+
+.line-container {
+	position: relative;
+	margin: 60px 0;
+}
+
+.separator {
+	border: none;
+	background-color: var(--light-grey);
+	height: 1px;
+}
+
+.img-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--purple);
+	border-radius: 50%;
+	width: 65px;
+	height: 65px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.1s;
+}
+
+.img-container:hover {
+	background-color: var(--off-black);
+}
+
+.img-container:active {
+	background-color: var(--purple);
+}
+
+.arrow-icon {
+	transform: scale(0.6);
+}
+
+.results-container {
+	font-size: 32px;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.number {
+	color: var(--purple);
+}
+
+.error-msg {
+	margin-top: 10px;
+	font-size: 12px;
+	font-style: italic;
+	color: var(--light-red);
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		height: 600px;
+	}
+
+	.inputs-container {
+		justify-content: flex-start;
+		gap: 15px;
+	}
+
+	.input-container {
+		max-width: 150px;
+	}
+
+	.input {
+		padding: 25px 20px;
+	}
+
+	.img-container {
+		width: 80px;
+		height: 80px;
+		left: 94%;
+	}
+
+	.arrow-icon {
+		transform: scale(1);
+	}
+
+	.results-container {
+		font-size: 64px;
+	}
+}

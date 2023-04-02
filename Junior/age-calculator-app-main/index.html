@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="./styles/style.css" />
+		<title>Frontend Mentor | Age calculator app</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="inputs-container">
+				<div class="input-container">
+					<label for="" class="input-label">day</label>
+					<input type="number" id="input-day" name="input-day" class="input" placeholder="DD" />
+					<span class="error-msg">This field is required</span>
+				</div>
+				<div class="input-container">
+					<label for="" class="input-label">month</label>
+					<input type="number" id="input-month" name="input-month" class="input" placeholder="MM" />
+					<span class="error-msg">This field is required</span>
+				</div>
+				<div class="input-container">
+					<label for="" class="input-label">year</label>
+					<input type="number" id="input-year" name="input-year" class="input" placeholder="YYYY" />
+					<span class="error-msg">This field is required</span>
+				</div>
+			</div>
+			<div class="line-container">
+				<hr class="separator" />
+				<button id="submitButton" class="img-container">
+					<img src="./assets/images/icon-arrow.svg" alt="Arrow icon" class="arrow-icon" />
+				</button>
+			</div>
+			<div class="results-container">
+				<p id="result-years" class="result">
+					<span id="year-number" class="number">--</span>
+					years
+				</p>
+				<p id="result-moths" class="result">
+					<span id="month-number" class="number">--</span>
+					months
+				</p>
+				<p id="result-days" class="result">
+					<span id="day-number" class="number">--</span>
+					days
+				</p>
+			</div>
+		</div>
+		<script src="./scripts/script.js"></script>
+	</body>
 </html>
